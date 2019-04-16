@@ -1667,6 +1667,12 @@ namespace CodingSeb.ExpressionEvaluator
 
                         object element = Activator.CreateInstance(type, cArgs.ToArray());
 
+                        //System.Linq.Expressions.NewExpression newExp = System.Linq.Expressions.Expression.New(type).Update(cArgs.Select(o => ((System.Linq.Expressions.Expression)System.Linq.Expressions.Expression.Constant(o))));
+
+                        //System.Linq.Expressions.Expression.Lambda(newExp,);
+
+                        //System.Linq.Expressions.Expression.Lambda(type).Compile()
+
                         Match blockBeginningMatch = blockBeginningRegex.Match(expr.Substring(i));
 
                         if (blockBeginningMatch.Success)
